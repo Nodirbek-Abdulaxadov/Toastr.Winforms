@@ -54,7 +54,7 @@ public partial class Toast : Form
     public void ShowSuccess()
     {
         icon.Image = Properties.Resources.success_icon;
-        message.Text = "Muvoffaqqiyatli saqlandi!";
+        message.Text = "Successfully!";
         BackColor = Color.FromArgb(113, 179, 113);
         Show();
     }
@@ -77,7 +77,7 @@ public partial class Toast : Form
     public void ShowError()
     {
         icon.Image = Properties.Resources.error_icon;
-        message.Text = "Xatolik yuz berdi!";
+        message.Text = "Something went wrong!";
         BackColor = Color.FromArgb(202, 94, 88);
         Show();
     }
@@ -90,6 +90,18 @@ public partial class Toast : Form
         icon.Image = Properties.Resources.error_icon;
         message.Text = msg;
         BackColor = Color.FromArgb(202, 94, 88);
+        Show();
+    }
+
+    /// <summary>
+    /// Show warning
+    /// </summary>
+    /// <param name="msg"></param>
+    public void ShowWarning()
+    {
+        icon.Image = Properties.Resources.warning_icon;
+        message.Text = "Warning!";
+        BackColor = Color.FromArgb(247, 167, 53);
         Show();
     }
 
