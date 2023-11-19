@@ -1,7 +1,7 @@
 ﻿
 namespace Toastr.Winforms
 {
-    partial class Toastr
+    partial class Toast
     {
         /// <summary>
         ///  Required designer variable.

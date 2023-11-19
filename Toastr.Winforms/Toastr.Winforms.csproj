@@ -10,6 +10,8 @@
     <Title>Toastr for Windows Forms</Title>
     <Authors>Nodirbek Abdulakhadov</Authors>
     <Company>MDevs Group</Company>
+    <RepositoryUrl>https://github.com/Nodirbek-Abdulaxadov/Toastr.Winforms</RepositoryUrl>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

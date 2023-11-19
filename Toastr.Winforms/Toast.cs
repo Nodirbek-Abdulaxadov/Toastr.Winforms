@@ -1,8 +1,9 @@
 namespace Toastr.Winforms;
 
-public partial class Toastr : Form
+public partial class Toast : Form
 {
-    public Toastr(ToastrPosition toastrPosition = ToastrPosition.TopRight)
+    private readonly int _duration = 3000;
+    public Toast(ToastrPosition toastrPosition = ToastrPosition.TopRight, int duration = 3000)
     {
         InitializeComponent();
         StartPosition = FormStartPosition.Manual;
@@ -34,6 +35,7 @@ public partial class Toastr : Form
                 return;
             }
         }
+        _duration = duration;
     }
 
     /// <summary>
@@ -112,7 +114,7 @@ public partial class Toastr : Form
     {
         icon.Image = Properties.Resources.success_icon;
         close.Image = Properties.Resources.x_icon_light;
-        await Task.Delay(3000);
+        await Task.Delay(_duration);
         Close();
     }
 }
