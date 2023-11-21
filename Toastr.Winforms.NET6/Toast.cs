@@ -2,10 +2,14 @@ namespace Toastr.Winforms;
 
 public partial class Toast : Form
 {
-    private readonly int _duration = 3000;
-    public Toast(ToastrPosition toastrPosition = ToastrPosition.TopRight, int duration = 3000)
+    private int _duration;
+    private bool _enableSoundEffect;
+    public Toast(ToastrPosition toastrPosition = ToastrPosition.TopRight, int duration = 3000,
+                bool enableSoundEffect = false)
     {
         InitializeComponent();
+        _duration = duration;
+        _enableSoundEffect = enableSoundEffect;
         StartPosition = FormStartPosition.Manual;
         foreach (var scrn in Screen.AllScreens)
         {
@@ -35,7 +39,6 @@ public partial class Toast : Form
                 return;
             }
         }
-        _duration = duration;
     }
 
     /// <summary>
@@ -57,6 +60,10 @@ public partial class Toast : Form
         message.Text = "Successfully!";
         BackColor = Color.FromArgb(113, 179, 113);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Success();
+        }
     }
 
     /// <summary>
@@ -69,6 +76,10 @@ public partial class Toast : Form
         message.Text = msg;
         BackColor = Color.FromArgb(113, 179, 113);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Success();
+        }
     }
 
     /// <summary>
@@ -80,6 +91,10 @@ public partial class Toast : Form
         message.Text = "Something went wrong!";
         BackColor = Color.FromArgb(202, 94, 88);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Error();
+        }
     }
 
     /// <summary>
@@ -91,6 +106,10 @@ public partial class Toast : Form
         message.Text = msg;
         BackColor = Color.FromArgb(202, 94, 88);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Error();
+        }
     }
 
     /// <summary>
@@ -103,6 +122,10 @@ public partial class Toast : Form
         message.Text = "Warning!";
         BackColor = Color.FromArgb(247, 167, 53);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Warning();
+        }
     }
 
     /// <summary>
@@ -115,6 +138,10 @@ public partial class Toast : Form
         message.Text = msg;
         BackColor = Color.FromArgb(247, 167, 53);
         Show();
+        if (_enableSoundEffect)
+        {
+            PlaySounds.Warning();
+        }
     }
 
     /// <summary>

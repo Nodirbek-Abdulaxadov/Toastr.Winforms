@@ -9,14 +9,16 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>Toastr.Winforms</PackageId>
     <Title>Toastr for Windows Forms</Title>
-    <Version>6.0.0</Version>
+    <Version>6.1.0</Version>
     <Authors>Nodirbek Abdulakhadov</Authors>
     <Company>MDevs Group</Company>
     <Product>Toast.Winforms</Product>
     <Description>Toastr for Windows Forms. Very easy to use!</Description>
     <RepositoryUrl>https://github.com/Nodirbek-Abdulaxadov/Toastr.Winforms</RepositoryUrl>
     <PackageIcon>2246841_bell_notification_one notification_twitter_icon (1).png</PackageIcon>
-    <PackageReleaseNotes>Toastr.Winforms for .NET 6</PackageReleaseNotes>
+    <PackageReleaseNotes>Sound effects added
+
+</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
