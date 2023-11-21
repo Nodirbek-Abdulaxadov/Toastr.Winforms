@@ -2,20 +2,28 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>Toastr.Winforms</PackageId>
     <Title>Toastr for Windows Forms</Title>
+    <Version>6.0.0</Version>
     <Authors>Nodirbek Abdulakhadov</Authors>
     <Company>MDevs Group</Company>
+    <Product>Toast.Winforms</Product>
+    <Description>Toastr for Windows Forms. Very easy to use!</Description>
     <RepositoryUrl>https://github.com/Nodirbek-Abdulaxadov/Toastr.Winforms</RepositoryUrl>
-    <Version>1.1.1</Version>
+    <PackageIcon>2246841_bell_notification_one notification_twitter_icon (1).png</PackageIcon>
+    <PackageReleaseNotes>Toastr.Winforms for .NET 6</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.5" />
+    <None Include="..\..\..\Downloads\2246841_bell_notification_one notification_twitter_icon (1).png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
