@@ -21,7 +21,8 @@ To use **Toastr.Winforms** in your Windows Forms project, follow these steps:
 using Toastr.Winforms;
 
 // Create a new toast notification
-var toast = new Toast(ToastrPosition.TopRight, duration: 3000);
+// Note: In version 6.1.0, 'enableSoundEffect' has been added to the constructor parameters.
+var toast = new Toast(ToastrPosition.TopRight, duration: 3000, enableSoundEffect: true);
 // Or you can use defaults: var toast = new Toast();
 
 // Show a success notification
@@ -32,8 +33,5 @@ toast.ShowError("An error occurred.");
 
 // Show a warning notification
 toast.ShowWarning("This is a warning message.");
-
-// You can also customize the toast message
-toast.ShowSuccess("Custom success message");
 
 // The toast notification will automatically close after the specified duration.
